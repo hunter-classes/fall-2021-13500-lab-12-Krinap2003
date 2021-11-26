@@ -47,12 +47,15 @@ vector<int> sumPairWise(const vector<int> &v1, const vector<int> &v2)
             result.push_back(sum);
         }
     }
-    else
+    else 
     {
-         for(int i = 0; i < v2.size(); i++)
+        for(int i = 0; i < v2.size(); i++)
         {
-            int sum = v1[i] + v2[i];
-            result.push_back(sum);
+            result.push_back(0);
+            if(v1.size() > i)
+            result[i] += v1[i];
+            if(v2.size() > i)
+            result[i] += v2[i];
         }
     }
     return result;

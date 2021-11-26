@@ -73,14 +73,8 @@ int main()
     std::cout<<"\n---------------------- \n";
     std::cout<<"Task D \n";
     std::cout<<"---------------------- \n"; 
-    vector<int> v3;
-    v3.push_back(6);
-    v3.push_back(10);
-    v3.push_back(11);
-    vector<int> v4;
-    v4.push_back(4);
-    v4.push_back(20);
-    v4.push_back(9);
+    vector<int> v3{1,2};
+    vector<int> v4{4,5, 2, 10};
     std::vector<int> sum = sumPairWise(v3, v4);
     std::cout<<"New Vector:[ ";
     for(int i = 0; i < sum.size(); i++)
@@ -88,6 +82,7 @@ int main()
         std::cout<<sum[i]<<" ";
     }
     std::cout<<"] \n";
+
     vector<int> v5{1,2,3};
     vector<int> v6{4,5};
     std::vector<int> sum2 = sumPairWise(v5, v6);
