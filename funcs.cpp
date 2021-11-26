@@ -14,6 +14,7 @@ std::vector<int> makeVector(int n)
     return result;
 }
 
+//Task B
 std::vector<int> goodVibes(const  std::vector<int> &v)
 {
     std::vector<int> result;
@@ -24,6 +25,7 @@ std::vector<int> goodVibes(const  std::vector<int> &v)
     return result;
 }
 
+//Task C
 void gogeta(std::vector<int> &goku, std::vector<int> &vegeta)
 {
     for(int i = 0; i < vegeta.size(); i++)
@@ -31,4 +33,27 @@ void gogeta(std::vector<int> &goku, std::vector<int> &vegeta)
         goku.push_back(vegeta[i]);
     }
     vegeta.clear();
+}
+
+//Task D
+vector<int> sumPairWise(const vector<int> &v1, const vector<int> &v2)
+{
+    std::vector<int> result;
+    if(v1.size() > v2.size())
+    {
+        for(int i = 0; i < v1.size(); i++)
+        {
+            int sum = v1[i] + v2[i];
+            result.push_back(sum);
+        }
+    }
+    else
+    {
+         for(int i = 0; i < v2.size(); i++)
+        {
+            int sum = v1[i] + v2[i];
+            result.push_back(sum);
+        }
+    }
+    return result;
 }

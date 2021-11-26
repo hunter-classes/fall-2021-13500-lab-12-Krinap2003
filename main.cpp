@@ -69,5 +69,33 @@ int main()
         std::cout<<v1[i]<<" ";
     }
     std::cout<<"] \n";
+
+    std::cout<<"\n---------------------- \n";
+    std::cout<<"Task D \n";
+    std::cout<<"---------------------- \n"; 
+    vector<int> v3;
+    v3.push_back(6);
+    v3.push_back(10);
+    v3.push_back(11);
+    vector<int> v4;
+    v4.push_back(4);
+    v4.push_back(20);
+    v4.push_back(9);
+    std::vector<int> sum = sumPairWise(v3, v4);
+    std::cout<<"New Vector:[ ";
+    for(int i = 0; i < sum.size(); i++)
+    {
+        std::cout<<sum[i]<<" ";
+    }
+    std::cout<<"] \n";
+    vector<int> v5{1,2,3};
+    vector<int> v6{4,5};
+    std::vector<int> sum2 = sumPairWise(v5, v6);
+    std::cout<<"New Vector:[ ";
+    for(int i = 0; i < sum2.size(); i++)
+    {
+        std::cout<<sum2[i]<<" ";
+    }
+    std::cout<<"] \n";
     return 0;
 }
