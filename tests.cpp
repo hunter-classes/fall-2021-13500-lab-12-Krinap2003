@@ -50,13 +50,22 @@ TEST_CASE("Task C")
 
 TEST_CASE("Task D")
 {
-    vector<int> v5;
-    v5.push_back(1);
-    v5.push_back(2);
-    v5.push_back(3);
-    vector<int> v6{4,5};
-    std::vector<int> sum2 = sumPairWise(v5, v6);
+    vector<int> v5{1,2};
+    vector<int> v4{4,5};
+    std::vector<int> sum2 = sumPairWise(v5, v4);
     CHECK(sum2[0] == 5);
     CHECK(sum2[1] == 7);
-    CHECK(sum2[2] == 3);
+    CHECK(sum2[2] == 0);
+    vector<int> v6{10,230, 45};
+    vector<int> v7{10,5};
+    std::vector<int> sum3 = sumPairWise(v6, v7);
+    CHECK(sum3[0] == 20);
+    CHECK(sum3[1] == 235);
+    CHECK(sum3[2] == 45);
+    vector<int> v8{};
+    vector<int> v9{10,5};
+    std::vector<int> sum4 = sumPairWise(v8, v9);
+    CHECK(sum4[0] == 10);
+    CHECK(sum4[1] == 5);
+    CHECK(sum4[2] == 0);
 }
